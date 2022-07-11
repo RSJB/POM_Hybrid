@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="Open cart Test Regression Test " thread-count="2" parallel="tests">
+
+  <test  name="Open Card Home Page Test">
     <classes>
       <class name="com.qa.opencart.tests.HomePageTest"/>
+    </classes>
+    </test>
+    
+    <test name="Open Card Login Page Test">
+     <classes>
+      <class name="com.qa.opencart.tests.LoginPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

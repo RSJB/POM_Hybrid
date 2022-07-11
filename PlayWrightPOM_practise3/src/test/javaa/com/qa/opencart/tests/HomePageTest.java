@@ -10,19 +10,22 @@ import com.qa.opencart.constant.AppConstants;
 public class HomePageTest extends BaseTest {
 
 	@Test
-	public void homePageTitleTest() {
+	public void homePageTitleTest() 
+	{
 		String actualTitle = homePage.getHomePageTitle();
-		Assert.assertEquals(actualTitle, AppConstants.LOGIN_PAGE_TITLE);
+		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
 	}
 
 	@Test
-	public void homePageURLTest() {
+	public void homePageURLTest() 
+	{
 		String actualURL = homePage.getHomePageURL();
 		Assert.assertEquals(actualURL, prop.getProperty("url"));
 	}
 
 	@DataProvider
-	public Object[][] getProductData() {
+	public Object[][] getProductData()
+	{
 		return new Object[][] {
 				{ "Macbook" }, 
 				{ "iMac" }, 
@@ -31,7 +34,8 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@Test(dataProvider = "getProductData")
-	public void searchTest(String productName) {
+	public void searchTest(String productName)
+	{
 		String actualSearchHeader = homePage.doSearch(productName);
 		Assert.assertEquals(actualSearchHeader, "Search - " + productName);
 	}
